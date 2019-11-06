@@ -1,9 +1,10 @@
-- hosts: localhost
+- hosts: all
   become: true
   tasks:
-    - name: Install packages
-      apt: name={{item}}
-      with_items:
+  - name: Install packages
+      apt:
+        state: present
+        pkg:
         - vim
         - emacs
         - tmux
