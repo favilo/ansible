@@ -3,7 +3,7 @@
   tasks:
   - name: Install packages
     apt:
-        state: installed
+        state: present
         update_cache: true
         pkg:
         - vim
