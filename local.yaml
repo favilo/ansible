@@ -3,10 +3,13 @@
   tasks:
   - name: Install packages
     apt:
-        state: present
+        state: installed
+        update_cache: true
         pkg:
         - vim
         - emacs
         - tmux
         - htop
         - aptitude
+        - haskell-stack
+        - golang-go
