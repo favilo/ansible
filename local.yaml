@@ -1,7 +1,7 @@
 - hosts: localhost
-  become: true
   tasks:
   - name: Install packages
+    become: true
     apt:
         state: present
         update_cache: true
@@ -13,3 +13,5 @@
         - aptitude
         - haskell-stack
         - golang-go
+  - name: Stack packages
+    command: stack install super-user-spark
